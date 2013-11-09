@@ -8,9 +8,9 @@ class Example(models.Model):
     approved=models.BooleanField(default=False)
 
 class User(models.Model):
-    first_name=models.CharField(max_length=10)
-    last_name=models.CharField(max_length=10)
-    email=models.CharField(max_length=20)
+    first_name=models.CharField(max_length=100)
+    last_name=models.CharField(max_length=100)
+    email=models.CharField(max_length=30)
 
 class Comment(models.Model):
     author=models.ForeignKey(User)
