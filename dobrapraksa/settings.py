@@ -124,9 +124,13 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'example',
+    'threadedcomments',
+    'django.contrib.comments',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+COMMENTS_APP = 'threadedcomments'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 

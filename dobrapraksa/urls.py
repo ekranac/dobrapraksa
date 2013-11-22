@@ -7,5 +7,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^(?P<slug>[\w\-]+)/$', 'example.views.post'),
-                       url(r'^$','example.views.index')
+                       url(r'^$','example.views.index'),
+                       url(r'^comments/', include('django.contrib.comments.urls')),
     )
