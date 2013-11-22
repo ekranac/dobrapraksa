@@ -6,16 +6,13 @@
     <article>
         <header>
             <h1> {{post.title}} </h1>
-            <p>
-                Posted on
-                <time datetime="{{post.date|date:"c"}}">
-                {{post.date|date}}
-                </time>
-            </p>
+            <p>Posted by {{post.author}}
+			<br>
+			{{post.date|date}}</p>
         </header>
-        <p class="description">
-            {{post.description}}
-        </p>
+		<hr>
         {{post.content|safe}}
     </article>
+	<br>
+	<hr>
     {% endblock %}

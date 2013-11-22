@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 class Example(models.Model):
     title=models.CharField(max_length=20)
+    description=models.CharField(max_length=50)
     content=models.TextField()
     author=models.ForeignKey(User)
     date=models.DateTimeField(auto_now_add=True)
@@ -14,6 +15,3 @@ class Comment(models.Model):
     date=models.DateTimeField(auto_now_add=True)
     content=models.TextField()
     example=models.ForeignKey(Example)
-
-def get_absolute_url(self):
-    return reverse('example.views.post', args=[self.slug])
