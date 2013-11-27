@@ -1,0 +1,14 @@
+<div id="form-comment">
+    <form action="/comments/post/" method="post">
+
+    {% csrf_token %}
+    Komentar:
+        <p><label for="id_comment"></label>
+    <textarea type="text" name="comment" id="id_comment"></textarea></p>
+
+        <p>
+            <input type="submit" value="Submit Comment"/>
+            <a href="#c0" id="cancel_reply">cancel reply</a>
+        </p>
+    </form>
+</div>

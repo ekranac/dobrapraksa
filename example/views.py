@@ -8,6 +8,3 @@ def post(request, slug):
 def index(request):
     post_list=Example.objects.filter(approved=True)
     return render(request, 'index.html', {"posts":post_list})
-'''
-def comment(request):
-'''
