@@ -1,6 +1,7 @@
 <div id="form-comment">
     <form action="/comments/post/" method="post">
-
+        content_type  = forms.CharField(widget=forms.HiddenInput)
+        object_pk     = forms.CharField(widget=forms.HiddenInput)
     {% csrf_token %}
     Komentar:
         <p><label for="id_comment"></label>
