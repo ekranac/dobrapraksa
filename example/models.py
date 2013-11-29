@@ -10,6 +10,9 @@ class Example(models.Model):
     approved=models.BooleanField(default=False)
     slug=models.SlugField(unique=True, max_length=255)
 
+    def get_absolute_url(self):
+        return self.slug
+
 class Comment(models.Model):
     author=models.ForeignKey(User)
     date=models.DateTimeField(auto_now_add=True)

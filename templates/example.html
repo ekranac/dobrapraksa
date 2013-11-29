@@ -1,7 +1,5 @@
     {% extends 'base.html' %}
-	
-	{% load threadedcomments_tags %}
-     
+
     {% block title %}{{post.title}}{% endblock %}
      
     {% block content %}
@@ -18,6 +16,4 @@
 	<br>
 	<hr>
 	<h4>Comments for {{post.title}}</h4>
-	{% render_comment_form for post %}
-	{% render_comment_list for post %}
     {% endblock %}

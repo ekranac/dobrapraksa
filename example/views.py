@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from example.models import Example, Comment
+from django.http import HttpResponseRedirect
 
 def post(request, slug):
     post=get_object_or_404(Example, slug=slug)
