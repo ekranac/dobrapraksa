@@ -6,14 +6,22 @@
     <article>
         <header>
             <h1> {{post.title}} </h1>
-            <p>Posted by {{post.author}}
+            {{ post.description }}
+            <p>Posted by {{post.author}} on {{ post.date|date }}</p>
 			<br>
-			{{post.date|date}}</p>
         </header>
 		<hr>
         {{post.content|safe}}
     </article>
 	<br>
-	<hr>
-	<h4>Comments for {{post.title}}</h4>
-    {% endblock %}
+	<hr><br/>
+
+<form action="" method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+{% for comment in comment_list %}
+    <p>{{ comment.author }}: {{comment.content}}</p>
+{% endfor %}
+{% endblock %}

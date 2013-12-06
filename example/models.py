@@ -11,7 +11,10 @@ class Example(models.Model):
     slug=models.SlugField(unique=True, max_length=255)
 
     def get_absolute_url(self):
-        return self.slug
+        return reverse('post.views.post', args=[self.slug])
+
+    def __unicode__(self):
+        return self.title
 
 class Comment(models.Model):
     author=models.ForeignKey(User)
