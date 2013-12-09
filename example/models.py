@@ -13,6 +13,9 @@ class Example(models.Model):
     def get_absolute_url(self):
         return self.slug
 
+    def __unicode__(self):
+        return self.title
+
 class Comment(models.Model):
     author=models.ForeignKey(User)
     date=models.DateTimeField(auto_now_add=True)
