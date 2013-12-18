@@ -2,7 +2,7 @@ from django.template.loader import get_template
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from example.forms import CreateCommentForm
-from example.models import Example, Comment
+from example.models import Example, Comment, User
 from django.http import HttpResponseRedirect
 from django.template.loader import get_template
 from django.contrib.auth.decorators import login_required
